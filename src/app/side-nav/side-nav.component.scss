@@ -1,0 +1,31 @@
+.grey-border {
+  border: 1px solid #ddd;
+}
+
+.border-none {
+  border: none !important;
+}
+
+.nav-main-item {
+  padding: 12px;
+  height: 54px;
+}
+
+.nav-main-item-active {
+  background-color: black;
+  color: #fff;
+  padding: 12px;
+  height: 54px;
+
+  &::after {
+    left: 210px;
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 27px solid transparent;
+    border-bottom: 27px solid transparent;
+    border-left: 27px solid black;
+    margin-top: -12px;
+  }
+}

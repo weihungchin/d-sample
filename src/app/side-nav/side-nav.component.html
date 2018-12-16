@@ -1,0 +1,7 @@
+<div class="cursor-pointer grey-border" *ngFor="let mainItem of navList">
+  <h3 class="nav-main-item-active" style="width:200px" [ngClass]="{'nav-main-item':!mainItem.active, 'nav-main-item-active':mainItem.active}"
+    (click)="toggleList(mainItem.mainLabel)">{{mainItem.mainLabel}}</h3>
+  <ul class="list-group" *ngIf="mainItem.active">
+    <li class="list-group-item cursor-pointer border-none" *ngFor="let item of mainItem.subList" (click)="onClickSubItem(item.label)">{{item.label}}</li>
+  </ul>
+</div>
